@@ -23,7 +23,7 @@ from telegram.ext import (
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 
-from Mizuki import (
+from Michi import (
     ALLOW_EXCL,
     CERT_PATH,
     DONATION_LINK,
@@ -43,9 +43,9 @@ from Mizuki import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from Mizuki.modules import ALL_MODULES
-from Mizuki.modules.helper_funcs.chat_status import is_user_admin
-from Mizuki.modules.helper_funcs.misc import paginate_modules
+from Michi.modules import ALL_MODULES
+from Michi.modules.helper_funcs.chat_status import is_user_admin
+from Michi.modules.helper_funcs.misc import paginate_modules
 
 
 def get_readable_time(seconds: int) -> str:
@@ -76,7 +76,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = "Hi {}, my name is {} 👸\n\nI'm a next gen powerful group manager bot. Made by [Janindu 🇱🇰](t.me/imjanindu)\n\nHit /help to find my list of available commands"
+PM_START_TEXT = "Hi {}, my name is {} 👸\n\nI'm a next gen cute and powerful group manager bot. Made by [KASU](https://t.me/kasu_bro)\n\nHit /help to find my list of available commands"
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
@@ -95,10 +95,9 @@ I'm a group management bot, here to help you get around and keep the order in yo
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !\n",
 )
 
-SAITAMA_IMG = "https://telegra.ph/file/2cdd052cf883e8ace4ffa.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/baf7de8fef40c679da7de.jpg"
 
-DONATE_STRING = """Heya, glad to hear you want to donate for developer. This bot runs on heroku so bot slow down some times and developer cannot add more modules due to heroku can't run them.\n\nBetter if my developer recieved a VPS to run the bot. Contact him and help him to continue this.\n\nDeveloper: [@ImJanindu](t.me/imjanindu)"""
-
+DONATE_STRING = """Heya, glad to hear you want to donate for developer. This bot runs on heroku so bot slow down some times and developer cannot add more modules due to heroku can't run them.\n\nBetter if my developer recieved a VPS to run the bot. Contact him and help him to continue this.\n\nDeveloper: [@kasu_bro](t.me/kasu_bro)"""
 IMPORTED = {}
 MIGRATEABLE = []
 HELPABLE = {}
@@ -214,7 +213,7 @@ def start(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="➕ Add Mizuki to your Group",
+                                text="➕ Add Michi to your Group",
                                 url="t.me/{}?startgroup=true".format(
                                     context.bot.username
                                 ),
@@ -232,7 +231,7 @@ def start(update: Update, context: CallbackContext):
                         ],
                         [
                             InlineKeyboardButton(
-                                text="🇱🇰 Developer", url="https://github.com/imjanindu"
+                                text="🇱🇰 Developer", url="https://github.com/kasu2002"
                             ),
                         ],
                     ]
